@@ -28,7 +28,7 @@ def get_car_boxes(boxes, class_ids):
 # Ścieżki
 ROOT_DIR = os.path.abspath(".")
 MODEL_DIR = os.path.join(ROOT_DIR, "logs")
-COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
+COCO_MODEL_PATH = os.path.join(ROOT_DIR, "car_recognition.h5")
 
 # Pobranie przetrenowanego modelu, jeśli nie istnieje
 if not os.path.exists(COCO_MODEL_PATH):
