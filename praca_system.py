@@ -67,7 +67,7 @@ while video_capture.isOpened():
     for detected_box in car_boxes:
         for json_box in json_coordinates['boxes']:
             iou = mrcnn.utils.compute_iou(detected_box, json_box, [1], [1])
-            if iou >= 0.8:
+            if iou <= 0.2:
                 message = client.messages.create(
                     body="Zwolnione miejsce parkingowe!",
                     from_="Twilio Number",
